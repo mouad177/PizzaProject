@@ -45,7 +45,7 @@ function Header() {
   return (
 <>
 
-<nav  className='bg-slate-200 z-50 rounded-2xl shadow-yellow-500 fixed w-full' dir='rtl'>
+<nav  className='bg-slate-200 z-50 rounded-2xl shadow-yellow-500 fixed w-full ' dir='rtl'>
 <div className="flex justify-between items-center  w-[90%] mx-auto">
 <motion.div id="logo" initial={{opacity:0,x:100}} animate={{opacity:1,x:0}} transition={{duration:1}}  className='flex gap-2 items-center'>
 <img  src={CarLogo} width={70} alt='Logo Car' />

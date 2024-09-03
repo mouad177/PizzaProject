@@ -31,7 +31,7 @@ function Home() {
         <Header/>
    <section id="Home">
     <div className='flex flex-col md:flex-row items-center'>
-    <motion.img initial={{x:-120,opacity:0,rotate:20}} transition={{duration:1}} animate={{opacity:1,x:0,rotate:0}} className='z-20' src={car} width={600} alt="Car" />
+    <motion.img  initial={{x:-120,opacity:0,rotate:20}} transition={{duration:1}} animate={{opacity:1,x:0,rotate:0}} className='z-20' src={car} width={600} alt="Car" />
 
         <div className='flex flex-col items-center text-center gap-10'>
 <motion.h1 initial={{y:40,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:1,delay:0.4}} className='text-orange-400 text-7xl font-extrabold md:mr-24'> !اختر سيارتك  </motion.h1 >
@@ -40,24 +40,30 @@ function Home() {
     </div>
 <motion.div initial={{opacity:0,rotate:74}} transition={{duration:1}} animate={{opacity:1,rotate:80}} id='bg' className='z-10 w-[400px] h-[680px] duration-1000 top-[-20%] left-[-80%] lg:w-[780px] lg:h-[500px] lg:left-[-20%] bg-orange-400 dark:bg-orange-500 absolute md:top-[0%] rotate-[80deg] md:w-[740px] md:h-[400px] md:left-[-30%]'></motion.div>
    </section>
-   <section id='AboutUs'>
-<div id='about' className="flex flex-col md:flex-row-reverse items-center justify-around gap-7">
-    <motion.div initial={{opacity:0,x:220}} transition={{duration:1}} whileInView={{opacity:1,x:0}} viewport={{once:false,amount:0.5}}><Lottie style={{width:600}} animationData={carAnimation} />
-    </motion.div>
+   <section id='AboutUs' >
+
+<div className="flex flex-col md:flex-row-reverse items-center justify-around gap-7">
+   
+<motion.div initial={{opacity:0,x:20}} viewport={{once:false,amount:0.5}} whileInView={{opacity:1,x:0}} transition={{duration:1}} ><Lottie  style={{width:600,height:500}} animationData={carAnimation} />
+</motion.div>
+
+
 <div className='flex flex-col items-center gap-16 text-center'>
     <motion.h2 initial={{opacity:0,x:-20}} transition={{duration:1}} whileInView={{opacity:1,x:0}} viewport={{once:false,amount:0.5}} className='font-extrabold text-orange-300 text-6xl '>من نحن</motion.h2>
     <motion.p initial={{opacity:0,y:30}} transition={{duration:1,delay:0.2}} whileInView={{opacity:1,y:0}} viewport={{once:false,amount:0.5}} className='text-2xl m-2 text-black dark:text-white px-5 text-center w-[100%] '>
     مرحباً بكم في سيارات حديثة! نحن متخصصون في بيع واستئجار السيارات الجديدة والمستعملة. نقدم لكم خيارات متنوعة بجودة عالية وأسعار تنافسية. فريقنا هنا لمساعدتكم في العثور على السيارة المناسبة لاحتياجاتكم. شكراً لاختياركم سيارات حديثة</motion.p>
 </div>
+
 </div>
    </section>
-    <section id="CarsRental" className='w-full' >
+
+    <section id="CarsRental">
         <motion.h2 initial={{opacity:0,x:-30}} whileInView={{opacity:1,x:0}} transition={{duration:1}} viewport={{amount:0.5,once:false}} className='font-extrabold text-6xl mb-10 text-center  text-orange-300 mt-10'>سيارات للتأجير</motion.h2>
-<div id="Cars" className='md:grid lg:grid-cols-4 md:grid-cols-3 mx-auto w-[80%] md:translate-x-0 translate-x-10 flex flex-col justify-center items-center'>
+<div id="Cars" className='md:grid lg:grid-cols-4 md:grid-cols-3 mx-auto w-[80%] flex flex-col justify-center items-center'>
 <motion.div initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}} viewport={{amount:0.5,once:false}} transition={{duration:1,delay:0.3}}>
 <Link to='/car1'>
    <div id="card" className='flex flex-col items-center gap-5'>
-        <img width={200} src={MercedesBenz} alt="MercedesBenz" />
+        <img  width={200} src={MercedesBenz} alt="MercedesBenz" />
         <p className='dark:text-white font-bold text-black'>Mercedes-Benz</p>
             <span className='text-lg font-bold dark:text-white text-black'>20$ لليوم الواحد</span>
             <button className='p-2 rounded-2xl bg-green-400 text-white font-bold hover:bg-green-600'>تأجير</button>
@@ -182,7 +188,7 @@ function Home() {
     </section>
     <section id="CarsSale">
     <motion.h2 initial={{opacity:0,x:-30}} whileInView={{opacity:1,x:0}} transition={{duration:1}} viewport={{amount:0.5,once:false}} className='font-extrabold text-6xl mb-10 text-center  text-green-400 mt-10'>سيارات للبيع</motion.h2>
-    <div id="Cars" className='md:grid lg:grid-cols-3 md:grid-cols-2 mx-auto w-[80%] md:translate-x-0 translate-x-10 flex flex-col justify-center items-center'>
+    <div id="Cars" className='md:grid lg:grid-cols-3 md:grid-cols-2 mx-auto w-[80%]  flex flex-col justify-center items-center'>
 <motion.div initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}} viewport={{amount:0.5,once:false}} transition={{duration:1,delay:0.3}}>
 <Link to='/car11'>
    <div id="card" className='flex flex-col items-center gap-5'>
