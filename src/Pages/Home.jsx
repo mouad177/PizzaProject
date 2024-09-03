@@ -29,7 +29,7 @@ function Home() {
   return (
     <>
         <Header/>
-   <section id="Home">
+   <section id="Home" >
     <div className='flex flex-col md:flex-row items-center'>
     <motion.img  initial={{x:-120,opacity:0,rotate:20}} transition={{duration:1}} animate={{opacity:1,x:0,rotate:0}} className='z-20' src={car} width={600} alt="Car" />
 

@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: "Changa", sans-serif;
   max-width: 100%;
+
 }
 
 html{
@@ -53,12 +54,5 @@ body{
   height: 200px;
   padding: 10px;
   outline: none;
-}
-@media (max-width:768px){
-
-  html,body{
-    width: 100%;
-    overflow-x: hidden;
-  }
 }
 
