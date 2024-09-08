@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap');
 
+
+
+html{
+  scroll-behavior: smooth;
+}
 *{
   margin: 0;
   padding: 0;
@@ -8,11 +13,6 @@
   max-width: 100%;
 
 }
-
-html{
-  scroll-behavior: smooth;
-}
-
 
 body{
   transition: 0.5s;
@@ -40,7 +40,6 @@ body{
 }
 #card:hover{
   scale: 1.05;
-  border: 2px solid orange;
 
 }
 @media (min-width:768px) and (max-width:1024px){
@@ -56,3 +55,13 @@ body{
   outline: none;
 }
 
+input{
+  outline: none;
+}
+@media (max-width:768px){
+
+  html,body{
+    overflow-x: hidden;
+  }
+
+}

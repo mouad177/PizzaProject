@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from "framer-motion"
-import CarLogo from '/MyLandingPageProjects/CarRental/src/assets/Logo/CarLogo.png'
 import menu from '/MyLandingPageProjects/CarRental/src/assets/icons/menu.png'
 import close from '/MyLandingPageProjects/CarRental/src/assets/icons/close.png'
 import moon from '/MyLandingPageProjects/CarRental/src/assets/icons/crescent-moon.png'
 import sun from '/MyLandingPageProjects/CarRental/src/assets/icons/sun.png'
+import pizzaLogo from '/MyLandingPageProjects/PizzaProject/src/assets/Logo/pizzaLogo.png'
+
 function Header() {
     useEffect(()=>{
         let menuBtn = document.getElementById('menu-btn');
@@ -48,10 +49,10 @@ function Header() {
 <nav  className='bg-slate-200 z-50 rounded-2xl shadow-yellow-500 fixed w-full ' dir='rtl'>
 <div className="flex justify-between items-center  w-[90%] mx-auto">
 <motion.div id="logo" initial={{opacity:0,x:100}} animate={{opacity:1,x:0}} transition={{duration:1}}  className='flex gap-2 items-center'>
-<img  src={CarLogo} width={70} alt='Logo Car' />
+<img  src={pizzaLogo} width={70} alt='Logo Car' />
 <div className='flex items-center gap-3'>
-<h2 className='text-orange-500 font-extrabold text-2xl'>سيارات</h2>
-<h2 className='text-[#2f2c2c] font-extrabold text-2xl'>حديثة</h2>
+<h2 className='text-red-500 font-extrabold text-2xl'>بيتزا</h2>
+<h2 className='text-[#2f2c2c] font-extrabold text-2xl'>السعادة</h2>
 </div>
 
 
@@ -63,11 +64,10 @@ function Header() {
 
    </div>
     <motion.ul initial={{opacity:0,y:-20}} animate={{opacity:1,y:0}} transition={{duration:1}} className=' gap-11 font-bold text-lg hidden lg:flex'>
-        <a className='hover:bg-orange-400 hover:text-white hover:rounded-2xl p-2 duration-500' href='#Home' >الصفحة الرئيسية</a>
-        <a className='hover:bg-orange-400 hover:text-white hover:rounded-2xl p-2 duration-500' href='#AboutUs' >من نحن</a>
-        <a className='hover:bg-orange-400 hover:text-white hover:rounded-2xl p-2 duration-500' href='#CarsRental'>سيارات لايجار</a>
-        <a className='hover:bg-orange-400 hover:text-white hover:rounded-2xl p-2 duration-500' href='#CarsSale'>سيارات للبيع</a>
-        <a className='hover:bg-orange-400 hover:text-white hover:rounded-2xl p-2 duration-500' href='#Contact'>اتصل بنا</a>
+        <a className='hover:bg-red-400 hover:text-white hover:rounded-2xl p-2 duration-500' href='#Home' >الصفحة الرئيسية</a>
+        <a className='hover:bg-red-400 hover:text-white hover:rounded-2xl p-2 duration-500' href='#AboutUs' >من نحن</a>
+        <a className='hover:bg-red-400 hover:text-white hover:rounded-2xl p-2 duration-500' href='#ListPizza'>قائمة البيتزا</a>
+        <a className='hover:bg-red-400 hover:text-white hover:rounded-2xl p-2 duration-500' href='#Contact'>اتصل بنا</a>
 
 
 
@@ -82,11 +82,10 @@ function Header() {
   </div>
 <div className="lg:hidden z-50">
 <motion.ul  initial={{opacity:0,height:0}} animate={{opacity:active?1:0,height:active?'auto':0,padding:active?2:0}} transition={{duration:0.5}} id='mobile-menu'  className='bg-slate-200 rounded-2xl right-6 left-6 items-center flex flex-col gap-4 font-bold text-lg hidden p-2'>
-        <motion.a transition={{duration:0.5,delay:0.2}} initial={{x:40,opacity:0}} animate={{x:active?0:40,opacity:active?1:0}} className='hover:bg-orange-400 hover:text-white hover:rounded-2xl p-2 duration-500' href='#Home' >الصفحة الرئيسية</motion.a>
-        <motion.a transition={{duration:0.5,delay:0.3}} initial={{x:40,opacity:0}} animate={{x:active?0:40,opacity:active?1:0}} className='hover:bg-orange-400 hover:text-white hover:rounded-2xl p-2 duration-500' href='#AboutUs' >من نحن</motion.a>
-        <motion.a transition={{duration:0.5,delay:0.4}} initial={{x:40,opacity:0}} animate={{x:active?0:40,opacity:active?1:0}} className='hover:bg-orange-400 hover:text-white hover:rounded-2xl p-2 duration-500' href='#CarsRental' >سيارات لايجار</motion.a>
-        <motion.a transition={{duration:0.5,delay:0.5}} initial={{x:40,opacity:0}} animate={{x:active?0:40,opacity:active?1:0}} className='hover:bg-orange-400 hover:text-white hover:rounded-2xl p-2 duration-500' href='#CarsSale'>سيارات للبيع</motion.a>
-        <motion.a transition={{duration:0.5,delay:0.5}} initial={{x:40,opacity:0}} animate={{x:active?0:40,opacity:active?1:0}} className='hover:bg-orange-400 hover:text-white hover:rounded-2xl p-2 duration-500' href='#Contact'>اتصل بنا</motion.a>
+        <motion.a transition={{duration:0.5,delay:0.2}} initial={{x:40,opacity:0}} animate={{x:active?0:40,opacity:active?1:0}} className='hover:bg-red-400 hover:text-white hover:rounded-2xl p-2 duration-500' href='#Home' >الصفحة الرئيسية</motion.a>
+        <motion.a transition={{duration:0.5,delay:0.3}} initial={{x:40,opacity:0}} animate={{x:active?0:40,opacity:active?1:0}} className='hover:bg-red-400 hover:text-white hover:rounded-2xl p-2 duration-500' href='#AboutUs' >من نحن</motion.a>
+        <motion.a transition={{duration:0.5,delay:0.4}} initial={{x:40,opacity:0}} animate={{x:active?0:40,opacity:active?1:0}} className='hover:bg-red-400 hover:text-white hover:rounded-2xl p-2 duration-500' href='#ListPizza' >قائمة البيتزا</motion.a>
+        <motion.a transition={{duration:0.5,delay:0.5}} initial={{x:40,opacity:0}} animate={{x:active?0:40,opacity:active?1:0}} className='hover:bg-red-400 hover:text-white hover:rounded-2xl p-2 duration-500' href='#Contact'>اتصل بنا</motion.a>
 
 
 
